@@ -1,0 +1,77 @@
+/* Basico */
+body{
+    background-color: darkgray;
+    text-align: center;
+}
+#entry_window, #main_window{
+    width: 100%;
+    height: 100%
+}
+
+/* Comienza asi */
+#entry_window { display: block; }
+#main_window { display: none; }
+
+/* Pantalla Inicio */
+#entry_window button{
+    margin-top: 135px;
+    font-size: 40px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    height: 65px;
+    border-radius: 7px;
+}
+#entry_window button:hover{
+    cursor: pointer;
+}
+#entry_window button:active, #entry_window button:focus{
+    outline: 0;
+    border: 0;
+}
+#entry_window span.textoBoton{
+    padding: 15px 12px 15px 12px;
+}
+#entry_window .titulo{
+    padding-top: 65px;
+}
+#entry_window .titulo h1{
+    font-family: 'Aclonica';
+    color: brown;
+    font-size: 50px;
+    margin: 0px;
+}
+#entry_window .titulo h3{
+    font-family: 'Aclonica';
+    color: rgb(109, 109, 109);
+    margin-top: 20px; 
+}
+
+/* version actual  **************************************  ACTUALIZAR */
+#version{
+    position: absolute;
+    bottom: 3px;
+    right: 7px;
+}
+
+
+/* Comenzamos a diseñar la Pantalla Principal */
+
+/*   Boton de Salida*/
+#salir {
+    position: absolute;
+    bottom: 3px;
+    left: 10px;
+    height: 20px;
+}
+
+/* Cartas de Personaje */
+#p1 {
+    margin-left: 20px;
+}
+.carta {
+    float: left;
+    height: 350px;
+    width: 100px;
+    background-color: white;
+    margin-top: 20px;
+    margin-right: 30px;
+}

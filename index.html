@@ -1,0 +1,43 @@
+<html>
+    <head>
+        <link rel="stylesheet" type="text/css" href="estilos/main.css">
+        <link href='https://fonts.googleapis.com/css?family=Aclonica' rel='stylesheet'>
+        <link href='https://fonts.googleapis.com/css?family=Kalam' rel='stylesheet'>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <script type="text/javascript" src="javascript/js.js"></script>
+    </head>
+    <body>
+        <!-- ventana de entrada a la app -->
+        <div id="entry_window">
+            <div class="titulo">
+                <h1>EQUINOX</h1>
+                <h3>App de Combate</h3>
+            </div>
+            <button onClick="entrarJuego();"><span class="textoBoton">Comenzar</span></button>
+        </div>
+
+
+        <!-- Ventana principal de la app -->
+        <div id="main_window">
+            <div id="personajes">
+                <div id="p1" class="carta">
+
+                </div>
+                <div id="p2" class="carta">
+                    
+                </div>
+                <div id="p3" class="carta">
+                    
+                </div>
+            </div>
+            <button id="salir" onClick="salirJuego();">(salir)</button>
+        </div>
+
+
+
+
+        <!-- version actual -->
+        <span id="version">v. 0.0.0.1</span>
+        
+    </body>
+</html>
