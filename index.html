@@ -13,31 +13,42 @@
                 <h1>EQUINOX</h1>
                 <h3>App de Combate</h3>
             </div>
-            <button onClick="entrarJuego();"><span class="textoBoton">Comenzar</span></button>
+            <button class="clicable" onClick="entrarJuego();"><span class="textoBoton">Comenzar</span></button>
         </div>
 
 
         <!-- Ventana principal de la app -->
         <div id="main_window">
             <div id="personajes">
-                <div id="p1" class="carta">
+                <div id="p1" class="carta_personaje carta_shadow">
 
                 </div>
-                <div id="p2" class="carta">
+                <div id="p2" class="carta_personaje carta_shadow">
                     
                 </div>
-                <div id="p3" class="carta">
+                <div id="p3" class="carta_personaje carta_shadow">
+                    
+                </div>
+                <div id="p4" class="carta_personaje carta_shadow">
+                    
+                </div>
+                <div id="p5" class="carta_personaje carta_shadow">
+                    
+                </div>
+                <div id="p6" class="carta_personaje carta_shadow">
                     
                 </div>
             </div>
-            <button id="salir" onClick="salirJuego();">(salir)</button>
+            <div id="menu_inferior" class="menu_shadow">
+                <button class="clicable" id="salir" onClick="salirJuego();">(salir)</button>
+            </div>
         </div>
 
 
 
 
         <!-- version actual -->
-        <span id="version">v. 0.0.0.1</span>
+        <span id="version">v. 0.0.0.2</span>
         
     </body>
 </html>

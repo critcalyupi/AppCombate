@@ -2,6 +2,7 @@
 body{
     background-color: darkgray;
     text-align: center;
+    margin: 0;
 }
 #entry_window, #main_window{
     width: 100%;
@@ -20,10 +21,10 @@ body{
     height: 65px;
     border-radius: 7px;
 }
-#entry_window button:hover{
+.clicable:hover{
     cursor: pointer;
 }
-#entry_window button:active, #entry_window button:focus{
+.clicable:active, .clicable:focus{
     outline: 0;
     border: 0;
 }
@@ -58,20 +59,41 @@ body{
 /*   Boton de Salida*/
 #salir {
     position: absolute;
-    bottom: 3px;
-    left: 10px;
-    height: 20px;
+    bottom: 9px;
+    left: 9px;
+    height: 25px;
+    background:none;
+    background-color: rgb(233, 233, 233);
+    border: 1px solid gray;
+    border-radius: 4px;
 }
 
 /* Cartas de Personaje */
 #p1 {
     margin-left: 20px;
 }
-.carta {
+.carta_personaje {
     float: left;
     height: 350px;
     width: 100px;
     background-color: white;
     margin-top: 20px;
-    margin-right: 30px;
+    margin-right: 50px;
+}
+
+.carta_shadow {
+    box-shadow: 0 6px 36px rgba(0,0,0,.30), 0 6px 12px rgba(0,0,0.22);
+}
+
+.menu_shadow {
+    box-shadow: 0 7px 20px rgba(0,0,0,.30), 0 6px 12px rgba(0,0,0.22);
+}
+
+#menu_inferior{
+    position: absolute;
+    width: 96%;
+    height: 30%;
+    bottom: 4%;
+    left: 2%;
+    background-color: white;
 }
