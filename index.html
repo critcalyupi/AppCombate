@@ -1,54 +1,122 @@
 <html>
-    <head>
-        <link rel="stylesheet" type="text/css" href="estilos/main.css">
-        <link href='https://fonts.googleapis.com/css?family=Aclonica' rel='stylesheet'>
-        <link href='https://fonts.googleapis.com/css?family=Kalam' rel='stylesheet'>
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-        <script type="text/javascript" src="javascript/js.js"></script>
-    </head>
-    <body>
-        <!-- ventana de entrada a la app -->
-        <div id="entry_window">
-            <div class="titulo">
-                <h1>EQUINOX</h1>
-                <h3>App de Combate</h3>
-            </div>
-            <button class="clicable" onClick="entrarJuego();"><span class="textoBoton">Comenzar</span></button>
+<head>
+    <!-- importaciones y cosas chungas -->
+    <link rel="stylesheet" type="text/css" href="estilos/main.css">
+    <script type="text/javascript" src="javascript/js.js"></script>
+
+    <link href='https://fonts.googleapis.com/css?family=Aclonica' rel='stylesheet'>
+    <link href='https://fonts.googleapis.com/css?family=Kalam' rel='stylesheet'>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    
+    <!-- cosillas basicas -->
+    <title>Equinox: Gestor</title>
+
+</head>
+
+
+
+<body>
+<!-- ventana de entrada a la app -->
+    <div id="entry_window">
+        <div class="titulo">
+            <h1>EQUINOX</h1>
+            <h3>App de Combate</h3>
+        </div>
+        <button class="clicable" onClick="entrarJuego();"><span class="textoBoton">Comenzar</span></button>
+    </div>
+
+
+<!-- Ventana principal de la app -->
+    <div id="main_window">
+        <div id="menu_lateral" class="menu_shadow">
+
+            <button class="clicable" id="salir" onClick="salirJuego();">(salir)</button>
         </div>
 
 
-        <!-- Ventana principal de la app -->
-        <div id="main_window">
-            <div id="personajes">
-                <div id="p1" class="carta_personaje carta_shadow">
-
-                </div>
-                <div id="p2" class="carta_personaje carta_shadow">
-                    
-                </div>
-                <div id="p3" class="carta_personaje carta_shadow">
-                    
-                </div>
-                <div id="p4" class="carta_personaje carta_shadow">
-                    
-                </div>
-                <div id="p5" class="carta_personaje carta_shadow">
-                    
-                </div>
-                <div id="p6" class="carta_personaje carta_shadow">
-                    
+        <div id="personajes">
+            <div id="p1" class="carta_personaje carta_shadow aliado per clicable">
+                <div class="capa farin">
+                    <p class="nombre">FARIN</p>
+                    <span id="titulos">BARBABRONCE DE LA CIUDAD DEL ACERO</span>
+                    <img class="clicable icono tank" src="imagenes/tank.png">
                 </div>
             </div>
-            <div id="menu_inferior" class="menu_shadow">
-                <button class="clicable" id="salir" onClick="salirJuego();">(salir)</button>
+            <div id="p2" class="carta_personaje carta_shadow aliado per">
+                <div class="capa asher">
+                    <p class="nombre">ASHER</p>
+                    <img class="clicable icono damage" src="imagenes/damage.png">
+                </div>
+            </div>
+            <div id="p3" class="carta_personaje carta_shadow aliado per">
+                <div class="capa xaldir">
+                    <p class="nombre">XALDIR</p>
+                    <img class="clicable icono damageM" src="imagenes/damage.png">
+                    <img class="clicable icono support" src="imagenes/healing.png">
+                </div>
+            </div>
+            <div id="p4" class="carta_personaje carta_shadow aliado per">
+                <div class="capa zalan">
+                    <p class="nombre">ZALAN</p>
+                    <img class="clicable icono support" src="imagenes/healing.png">
+                </div>
+            </div>
+            <div id="p5" class="carta_personaje carta_shadow aliado per">
+                <div class="capa sona">
+                    <p class="nombre">SONA</p>
+                    <img class="clicable icono healing" src="imagenes/healing.png">
+                </div>
+            </div>
+            <div id="p6" class="carta_personaje carta_shadow aliado npc">
+                <div class="capa tobias">
+                    <p class="nombre">TOBIAS</p>
+                    <img class="clicable icono support" src="imagenes/damage.png">
+                </div>
+            </div>
+            <div id="p7" class="carta_personaje carta_shadow enemigo">
+                <div class="capa">
+                    <p class="nombre">JIAGGRAS</p>
+                    <img class="clicable icono damage" src="imagenes/damage.png">
+                </div>
+            </div>
+            <div id="p8" class="carta_personaje carta_shadow enemigo">
+                <div class="capa">
+                    <p class="nombre">DZILLIO</p>
+                    <img class="clicable icono damage" src="imagenes/damage.png">
+                </div>
+            </div>
+            <div id="p9" class="carta_personaje carta_shadow enemigo">
+                <div class="capa">
+                    <p class="nombre">KULUYAN</p>
+                    <img class="clicable icono damage" src="imagenes/damage.png">
+                </div>
+            </div>
+            <div id="p10" class="carta_personaje carta_shadow enemigo">
+                <div class="capa">
+                    <p class="nombre">DRAGÓN</p>
+                    <img class="clicable icono damage" src="imagenes/damage.png">
+                </div>
+            </div>
+            <div id="p11" class="carta_personaje carta_shadow enemigo">
+                <div class="capa">
+                    <p class="nombre">MUSGOCHINO</p>
+                    <img class="clicable icono damage" src="imagenes/healing.png">
+                </div>
+            </div>
+            <div id="p12" class="carta_personaje carta_shadow enemigo">
+                <div class="capa">
+                    <p class="nombre">REPTADOR</p>
+                    <img class="clicable icono damage" src="imagenes/damage.png">
+                </div>
             </div>
         </div>
+    </div>
 
 
 
 
-        <!-- version actual -->
-        <span id="version">v. 0.0.0.2</span>
-        
-    </body>
+    <!-- version actual -->
+    <span id="version">v. 0.0.0.3</span>
+    
+</body>
 </html>

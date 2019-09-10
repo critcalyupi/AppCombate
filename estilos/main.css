@@ -1,6 +1,6 @@
 /* Basico */
 body{
-    background-color: darkgray;
+    background-color: white;
     text-align: center;
     margin: 0;
 }
@@ -48,7 +48,7 @@ body{
 
 /* version actual  **************************************  ACTUALIZAR */
 #version{
-    position: absolute;
+    position: fixed;
     bottom: 3px;
     right: 7px;
 }
@@ -69,31 +69,69 @@ body{
 }
 
 /* Cartas de Personaje */
-#p1 {
-    margin-left: 20px;
-}
 .carta_personaje {
     float: left;
-    height: 350px;
-    width: 100px;
-    background-color: white;
+    height: 370px;
+    width: 135px;
+    background-color: rgb(243, 243, 243);
     margin-top: 20px;
-    margin-right: 50px;
+    margin-bottom: 20px;
+    margin-left: 38px;
+    margin-right: 38px;
+    border: 1px solid white;
 }
-
 .carta_shadow {
-    box-shadow: 0 6px 36px rgba(0,0,0,.30), 0 6px 12px rgba(0,0,0.22);
+    box-shadow: 0 6px 36px rgba(0, 0, 0, 0.3), 0 6px 12px rgb(0, 0, 0);
+}
+.enemigo .capa{
+    height: 40%;
+    width: 100%;
+    background-color: #ff000056;
+}
+.aliado .capa{
+    height: 40%;
+    width: 100%;
+    background-color: rgba(0, 0, 255, 0.308);
+}
+.aliado.npc .capa{
+    height: 40%;
+    width: 100%;
+    background-color: rgba(0, 128, 0, 0.329);
+}
+.capa .nombre{
+    margin: 0;
+    font-size: 1.25em;
+    color: white;
+    font-family: 'Kalam';
+}
+#titulos{
+    font-size: 5px;
+    color: white;
+    font-family: 'Kalam';
+}
+.icono{
+    margin-top: 20px;
+    height: 40px;
+    width: 40px;
 }
 
 .menu_shadow {
-    box-shadow: 0 7px 20px rgba(0,0,0,.30), 0 6px 12px rgba(0,0,0.22);
+    box-shadow: 5px 3px 20px rgba(0,0,0,.30), 4px 2px 12px rgba(0,0,0.22);
 }
 
-#menu_inferior{
+#personajes{
     position: absolute;
-    width: 96%;
-    height: 30%;
-    bottom: 4%;
-    left: 2%;
-    background-color: white;
+    right: 0px;
+    width: 80%;
 }
+
+#menu_lateral{
+    position: fixed;
+    width: 16%;
+    height: 96%;
+    bottom: 2%;
+    left: 2%;
+    background-color: rgb(243, 243, 243);
+    border: 1px solid rgb(151, 151, 151);
+}
+
