@@ -1,0 +1,137 @@
+/* Basico */
+body{
+    background-color: darkgray;
+    text-align: center;
+    margin: 0;
+}
+#entry_window, #main_window{
+    width: 100%;
+    height: 100%
+}
+
+/* Comienza asi */
+#entry_window { display: block; }
+#main_window { display: none; }
+
+/* Pantalla Inicio */
+#entry_window button{
+    margin-top: 135px;
+    font-size: 40px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    height: 65px;
+    border-radius: 7px;
+}
+.clicable:hover{
+    cursor: pointer;
+}
+.clicable:active, .clicable:focus{
+    outline: 0;
+    border: 0;
+}
+#entry_window span.textoBoton{
+    padding: 15px 12px 15px 12px;
+}
+#entry_window .titulo{
+    padding-top: 65px;
+}
+#entry_window .titulo h1{
+    font-family: 'Aclonica';
+    color: brown;
+    font-size: 50px;
+    margin: 0px;
+}
+#entry_window .titulo h3{
+    font-family: 'Aclonica';
+    color: rgb(109, 109, 109);
+    margin-top: 20px; 
+}
+
+/* version actual  **************************************  ACTUALIZAR */
+#version{
+    position: fixed;
+    bottom: 3px;
+    right: 7px;
+}
+
+
+/* Comenzamos a diseñar la Pantalla Principal */
+
+/*   Boton de Salida*/
+#salir {
+    position: absolute;
+    bottom: 9px;
+    left: 9px;
+    height: 25px;
+    background:none;
+    background-color: rgb(233, 233, 233);
+    border: 1px solid gray;
+    border-radius: 4px;
+}
+
+/* Cartas de Personaje */
+.carta_ficha {
+    float: left;
+    height: 390px;
+    width: 140px;
+    background-color: rgb(243, 243, 243);
+    margin-top: 20px;
+    margin-bottom: 20px;
+    margin-left: 38px;
+    margin-right: 38px;
+
+    clip-path: polygon(50% 0%, 100% 18%, 100% 82%, 50% 100%, 0 82%, 0 18%);
+}
+.carta_shadow {
+    box-shadow: 0 6px 36px rgba(0, 0, 0, 0.3), 0 6px 12px rgb(0, 0, 0);
+}
+.enemigo .capa{
+    height: 40%;
+    width: 100%;
+    /*background-color: #ff000056;*/
+}
+.aliado .capa{
+    height: 40%;
+    width: 100%;
+    /*background-color: rgba(0, 0, 255, 0.308);*/
+}
+.aliado.npc .capa{
+    height: 40%;
+    width: 100%;
+    /*background-color: rgba(0, 128, 0, 0.329);*/
+}
+.capa .nombre{
+    margin: 0;
+    font-size: 1.25em;
+    color: white;
+    font-family: 'Kalam';
+}
+#titulos{
+    font-size: 5px;
+    color: white;
+    font-family: 'Kalam';
+}
+.icono{
+    margin-top: 20px;
+    height: 40px;
+    width: 40px;
+}
+
+.menu_shadow {
+    box-shadow: 5px 3px 20px rgba(0,0,0,.30), 4px 2px 12px rgb(0, 0, 0);
+}
+
+#fichas{
+    position: absolute;
+    right: 0px;
+    width: 80%;
+}
+
+#menu_lateral{
+    position: fixed;
+    width: 16%;
+    height: 96%;
+    bottom: 2%;
+    left: 2%;
+    background-color: rgb(243, 243, 243);
+    border: 1px solid rgb(151, 151, 151);
+}
