@@ -1,6 +1,6 @@
 /* Basico */
 body{
-    background-color: white;
+    background-color: darkgray;
     text-align: center;
     margin: 0;
 }
@@ -10,8 +10,8 @@ body{
 }
 
 /* Comienza asi */
-#entry_window { display: block; }
-#main_window { display: none; }
+#entry_window { display: none; }
+#main_window { display: block; }
 
 /* Pantalla Inicio */
 #entry_window button{
@@ -69,16 +69,17 @@ body{
 }
 
 /* Cartas de Personaje */
-.carta_personaje {
+.carta_ficha {
     float: left;
-    height: 370px;
-    width: 135px;
+    height: 390px;
+    width: 140px;
     background-color: rgb(243, 243, 243);
     margin-top: 20px;
     margin-bottom: 20px;
     margin-left: 38px;
     margin-right: 38px;
-    border: 1px solid white;
+
+    clip-path: polygon(50% 0%, 100% 18%, 100% 82%, 50% 100%, 0 82%, 0 18%);
 }
 .carta_shadow {
     box-shadow: 0 6px 36px rgba(0, 0, 0, 0.3), 0 6px 12px rgb(0, 0, 0);
@@ -86,17 +87,17 @@ body{
 .enemigo .capa{
     height: 40%;
     width: 100%;
-    background-color: #ff000056;
+    /*background-color: #ff000056;*/
 }
 .aliado .capa{
     height: 40%;
     width: 100%;
-    background-color: rgba(0, 0, 255, 0.308);
+    /*background-color: rgba(0, 0, 255, 0.308);*/
 }
 .aliado.npc .capa{
     height: 40%;
     width: 100%;
-    background-color: rgba(0, 128, 0, 0.329);
+    /*background-color: rgba(0, 128, 0, 0.329);*/
 }
 .capa .nombre{
     margin: 0;
@@ -116,10 +117,10 @@ body{
 }
 
 .menu_shadow {
-    box-shadow: 5px 3px 20px rgba(0,0,0,.30), 4px 2px 12px rgba(0,0,0.22);
+    box-shadow: 5px 3px 20px rgba(0,0,0,.30), 4px 2px 12px rgb(0, 0, 0);
 }
 
-#personajes{
+#fichas{
     position: absolute;
     right: 0px;
     width: 80%;
@@ -134,4 +135,3 @@ body{
     background-color: rgb(243, 243, 243);
     border: 1px solid rgb(151, 151, 151);
 }
-
