@@ -1,6 +1,8 @@
 /* Basico */
 body{
-    background-color: darkgray;
+    background-image: url("/web_de_combate/imagenes/fondo_equinox.jpg");
+    background-position: center;
+    background-size: cover;
     text-align: center;
     margin: 0;
 }
@@ -37,12 +39,12 @@ body{
 #entry_window .titulo h1{
     font-family: 'Aclonica';
     color: brown;
-    font-size: 50px;
+    font-size: 65px;
     margin: 0px;
 }
 #entry_window .titulo h3{
     font-family: 'Aclonica';
-    color: rgb(109, 109, 109);
+    color: rgb(75, 75, 75);
     margin-top: 20px; 
 }
 
@@ -105,7 +107,7 @@ body{
     color: white;
     font-family: 'Kalam';
 }
-#titulos{
+#titulos{ /* los de Farin */
     font-size: 5px;
     color: white;
     font-family: 'Kalam';

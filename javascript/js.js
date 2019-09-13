@@ -1,5 +1,6 @@
 function entrarJuego(){
     document.getElementById("entry_window").style.display = "none";
+    $(document.body).css("background-image",'url("/web_de_combate/imagenes/fondo1.jpg")');
     document.getElementById("main_window").style.display = "block";
 }
 function salirJuego(){
