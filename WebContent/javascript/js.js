@@ -1,10 +1,10 @@
 function entrarJuego(){
     document.getElementById("entry_window").style.display = "none";
-    $(document.body).css("background-image",'url("imagenes/fondo1.jpg")');
+    $(document.body).css("background-image",'url("imagenes/main_bg.jpg")');
     document.getElementById("main_window").style.display = "block";
 }
 function salirJuego(){
-    $(document.body).css("background-image",'url("imagenes/fondo_equinox.jpg")');
+    $(document.body).css("background-image",'url("imagenes/entry_bg.jpg")');
     document.getElementById("entry_window").style.display = "block";
     document.getElementById("main_window").style.display = "none";
 }

@@ -1,7 +1,7 @@
 @charset "UTF-8";
 /* Basico */
 body {
-  background: url("../imagenes/fondo_equinox.jpg") no-repeat center center fixed;
+  background: url("../imagenes/entry_bg.jpg") no-repeat center center fixed;
   background-size: cover;
   text-align: center;
   margin: 0; }
@@ -83,7 +83,7 @@ body {
   box-shadow: 0 6px 36px rgba(0, 0, 0, 0.3), 0 6px 12px black; }
 
 .capa {
-  background-image: url("../imagenes/fondo_1.jpg") !important;
+  background-image: url("../imagenes/ficha_bg.jpg") !important;
   background-size: cover;
   background-position: center; }
 

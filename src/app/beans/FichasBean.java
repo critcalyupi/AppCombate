@@ -14,5 +14,4 @@ public class FichasBean {
 		this.cantidadFichas = cantidadFichas;
 	}
 	
-	
 }
