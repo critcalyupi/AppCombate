@@ -1,7 +1,6 @@
 /* Basico */
 body{
-    background-image: url("/web_de_combate/imagenes/fondo_equinox.jpg");
-    background-position: center;
+    background: url("../imagenes/fondo_equinox.jpg") no-repeat center center fixed;
     background-size: cover;
     text-align: center;
     margin: 0;
@@ -86,23 +85,25 @@ body{
 .carta_shadow {
     box-shadow: 0 6px 36px rgba(0, 0, 0, 0.3), 0 6px 12px rgb(0, 0, 0);
 }
+.capa{
+    background-image: url("../imagenes/fondo_1.jpg") !important;
+    background-size: cover;
+    background-position: center;
+}
 .enemigo .capa{
     height: 40%;
     width: 100%;
-    /*background-color: #ff000056;*/
 }
 .aliado .capa{
     height: 40%;
     width: 100%;
-    /*background-color: rgba(0, 0, 255, 0.308);*/
 }
 .aliado.npc .capa{
     height: 40%;
     width: 100%;
-    /*background-color: rgba(0, 128, 0, 0.329);*/
 }
 .capa .nombre{
-    margin: 0;
+    margin: 20px 0 0 0;
     font-size: 1.25em;
     color: white;
     font-family: 'Kalam';
