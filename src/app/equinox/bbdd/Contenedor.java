@@ -1,5 +1,15 @@
 package app.equinox.bbdd;
 
-public class Contenedor {
+import app.equinox.core.Item;
 
+public class Contenedor extends Item {
+	
+	
+	
+	public void setCapacidad(Integer capacidad) { //Usamos volumen como capacidad
+		super.setVolumen(capacidad);
+	}
+	public Integer getCapacidad() {
+		return super.getVolumen();
+	}
 }

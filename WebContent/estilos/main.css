@@ -53,7 +53,9 @@ body {
 #version {
   position: fixed;
   bottom: 3px;
-  right: 7px; }
+  right: 7px;
+  color: #afafaf;
+  font-family: 'Kalam'; }
 
 /* Comenzamos a diseñar la Pantalla Principal */
 /*   Boton de Salida*/
@@ -119,7 +121,7 @@ body {
 .menu_shadow {
   box-shadow: 5px 3px 20px rgba(0, 0, 0, 0.3), 4px 2px 12px black; }
 
-#fichas {
+#fichass {
   position: absolute;
   right: 0px;
   width: 80%; }
@@ -130,7 +132,145 @@ body {
   height: 96%;
   bottom: 2%;
   left: 2%;
-  background-color: #f3f3f3;
-  border: 1px solid #979797; }
+  /*background-color: rgb(243, 243, 243);*/
+  /*border: 2px solid rgb(151, 151, 151);*/
+  background-image: url("/imagenes/menu_bg.jpg");
+  background-size: cover;
+  background-position: center; }
+
+/* NUEVO CODIGO */
+#fichas {
+  position: absolute;
+  right: 0px;
+  width: 80%;
+  /*display: inline-block;*/ }
+
+.ficha {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  margin-left: 38px;
+  margin-right: 38px;
+  float: left; }
+
+.ficha-capa {
+  filter: drop-shadow(-1px 6px 9px black);
+  float: left;
+  /*display: inline-block;*/ }
+
+.ficha-contenedor {
+  float: left;
+  height: 390px;
+  width: 140px;
+  clip-path: polygon(50% 0%, 100% 18%, 100% 82%, 50% 100%, 0 82%, 0 18%);
+  background-image: url("/imagenes/ficha_bg.jpg");
+  background-size: cover;
+  background-position: center; }
+
+.ficha-contenedor__cabecera {
+  margin-top: 30px; }
+
+.ficha-contenedor__cuerpo {
+  margin-top: 20px; }
+
+.ficha-contenedor__cuerpo-stats .ficha-contenedor__cuerpo-stat {
+  margin: 0 0 15px 0;
+  display: inline-block; }
+
+.ficha-contenedor__cuerpo-stat span {
+  width: 100%;
+  height: 100%;
+  font-size: 0.9em;
+  font-weight: bold;
+  color: silver; }
+
+.ficha-contenedor__cuerpo-clase {
+  margin: 5px 0;
+  font-weight: bold; }
+
+img {
+  height: 29px;
+  width: 29x; }
+
+.ficha-contenedor__cabecera-perfil {
+  margin-bottom: 3px;
+  height: 75px;
+  width: 75px;
+  clip-path: circle(50% at 50% 50%); }
+
+.ficha-contenedor__cabecera-perfil-marco {
+  height: 78px;
+  width: 78px;
+  clip-path: circle(50% at 50% 50%);
+  margin-top: -80px; }
+
+.ficha-contenedor__cabecera-tipos img {
+  height: 40px;
+  width: 40px;
+  margin: 0 2px; }
+
+.ficha-contenedor__pie {
+  margin: 10px 0 0 0; }
+
+.ficha-contenedor__pie-nombre {
+  color: white;
+  font-weight: bold; }
+
+.caja {
+  padding: 150px 0 0 0;
+  max-width: 45px;
+  margin: 0;
+  float: left; }
+
+.etiquetas {
+  filter: drop-shadow(-1px 6px 4px rgba(0, 0, 0, 0.336));
+  width: 45px; }
+
+.etiqueta {
+  width: 30px;
+  height: 22px;
+  clip-path: polygon(100% 0, 68% 50%, 100% 100%, 0 100%, 0 0);
+  margin-bottom: 7px; }
+
+.etiqueta.active {
+  width: 45px;
+  clip-path: polygon(100% 0, 78% 50%, 100% 100%, 0 100%, 0 0); }
+
+.atributos {
+  background-image: url("/imagenes/ficha_rojo.jpg");
+  background-size: cover;
+  background-position: center; }
+
+.habilidades {
+  background-image: url("/imagenes/ficha_azul.jpg");
+  background-size: cover;
+  background-position: center; }
+
+.inventario {
+  background-image: url("/imagenes/ficha_verde.jpg");
+  background-size: cover;
+  background-position: center; }
+
+.win_atributos {
+  background-image: url("/imagenes/ficha_rojo.jpg"); }
+
+.win_habilidades {
+  background-image: url("/imagenes/ficha_azul.jpg"); }
+
+.win_inventario {
+  background-image: url("/imagenes/ficha_verde.jpg"); }
+
+.win_atributos, .win_habilidades, .win_inventario {
+  width: 320px;
+  height: 246px;
+  margin: 72px 0 0 140px;
+  background-size: cover;
+  background-position: center; }
+
+/*
+.etiqueta:hover{
+    width: 45px;
+    clip-path: polygon(100% 0, 78% 50%, 100% 100%, 0 100%, 0 0);
+    cursor: pointer;
+}*/
 
 /*# sourceMappingURL=main.css.map */

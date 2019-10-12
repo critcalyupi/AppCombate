@@ -6,7 +6,7 @@ public class Consumible extends Item {
 	String efecto;
 
 	public String getEfecto() {
-		return "efecto";
+		return efecto;
 	}
 
 	public void setEfecto(String efecto) {

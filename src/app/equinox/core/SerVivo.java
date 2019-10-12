@@ -1,8 +1,14 @@
 package app.equinox.core;
 
+import java.util.ArrayList;
+import java.util.Collection;
 import java.util.HashMap;
 
-public abstract class SerVivo {
+public abstract class SerVivo extends Ente {
+	
+	//cositas guays
+	Collection<String> roles = new ArrayList<>();
+	
 	//estadisticas
 	Integer vida;
 	Integer mana;
@@ -26,13 +32,13 @@ public abstract class SerVivo {
 	
 	Integer astucia;
 	Integer agilidad;
-	Integer percepcion;
+	Integer sensitividad;
 	
 	public SerVivo() {}
 	
 	public SerVivo(Integer vida, Integer mana, Integer energia, Integer sangre, Integer fuerza, Integer destreza,
 			Integer resistencia, Integer inteligencia, Integer manipulacion, Integer velo, Integer astucia,
-			Integer agilidad, Integer percepcion) {
+			Integer agilidad, Integer sensitividad) {
 		super();
 		this.vida = vida;
 		this.mana = mana;
@@ -46,7 +52,15 @@ public abstract class SerVivo {
 		this.velo = velo;
 		this.astucia = astucia;
 		this.agilidad = agilidad;
-		this.percepcion = percepcion;
+		this.sensitividad = sensitividad;
+	}
+	
+	public Collection<String> getRoles() {
+		return roles;
+	}
+
+	public void setRoles(Collection<String> roles) {
+		this.roles = roles;
 	}
 	
 	public Integer getVida() {
@@ -154,11 +168,11 @@ public abstract class SerVivo {
 	public void setAgilidad(Integer agilidad) {
 		this.agilidad = agilidad;
 	}
-	public Integer getPercepcion() {
-		return percepcion;
+	public Integer getSensitividad() {
+		return sensitividad;
 	}
-	public void setPercepcion(Integer percepcion) {
-		this.percepcion = percepcion;
+	public void setSensitividad(Integer sensitividad) {
+		this.sensitividad = sensitividad;
 	}
 	
 	//getters y setters en bundle
@@ -170,7 +184,7 @@ public abstract class SerVivo {
 	}
 	
 	public void setAtributos(Integer fuerza, Integer destreza, Integer resistencia, Integer inteligencia,
-			Integer manipulacion, Integer velo, Integer astucia, Integer agilidad, Integer percepcion) {
+			Integer manipulacion, Integer velo, Integer astucia, Integer agilidad, Integer sensitividad) {
 		this.fuerza = fuerza;
 		this.destreza = destreza;
 		this.resistencia = resistencia;
@@ -179,7 +193,7 @@ public abstract class SerVivo {
 		this.velo = velo;
 		this.astucia = astucia;
 		this.agilidad = agilidad;
-		this.percepcion = percepcion;
+		this.sensitividad = sensitividad;
 	}
 	
 	public HashMap<String, Integer> getEstadisticas(){
@@ -201,10 +215,29 @@ public abstract class SerVivo {
 		res.put("velo",getVelo());
 		res.put("astucia",getAstucia());
 		res.put("agilidad",getAgilidad());
-		res.put("percepcion",getPercepcion());
+		res.put("sensitividad",getSensitividad());
 		return res;
 	}
 	
 	//metodos utiles
 	
+	public void resetStats() {
+		this.vidaActual = this.vida;
+		this.manaActual = this.mana;
+		this.energiaActual = this.energia;
+		this.sangreActual = this.sangre;
+	}
+	
+	public void setRoles(String r) {
+		this.roles.add(r);
+	}
+	public void setRoles(String r, String o) {
+		this.roles.add(r);
+		this.roles.add(o);
+	}
+	public void setRoles(String r, String o, String l) {
+		this.roles.add(r);
+		this.roles.add(o);
+		this.roles.add(l);
+	}
 }

@@ -4,7 +4,7 @@ import app.equinox.core.Ente;
 
 public class Habilidad extends Ente {
 	String descripcion;
-	String tipo;
+	String tipo = "habilidad especial"; //-> "talento", "magia" o "habilidad especial"
 	String tipo_coste;
 	int coste;
 	boolean costeVariable;
@@ -47,6 +47,14 @@ public class Habilidad extends Ente {
 	public void setDescripcion(String descripcion) {
 		this.descripcion = descripcion;
 	}
+	public String getTipo() {
+		return tipo;
+	}
+
+	public void setTipo(String tipo) {
+		this.tipo = tipo;
+	}
+
 	public String getTipo_coste() {
 		return tipo_coste;
 	}
@@ -59,6 +67,14 @@ public class Habilidad extends Ente {
 	public void setCoste(int coste) {
 		this.coste = coste;
 	}
+	public boolean isCosteVariable() {
+		return costeVariable;
+	}
+
+	public void setCosteVariable(boolean costeVariable) {
+		this.costeVariable = costeVariable;
+	}
+
 	public int getEnfriamiento() {
 		return enfriamiento;
 	}

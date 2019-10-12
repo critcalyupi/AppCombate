@@ -1,0 +1,75 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+          "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:f="http://java.sun.com/jsf/core"
+	  xmlns:p="http://primefaces.org/ui"
+	  xmlns:c="http://java.sun.com/jsp/jstl/core">
+<head>
+
+</head>
+
+<body>
+
+<ui:remove> PERSONAJES </ui:remove>
+<ui:repeat value="#{fichas}" var="ficha" varStatus="info">
+	<div id="ficha_#{info.index}" class="ficha personaje">
+		<div class="ficha-capa">
+            <div class="ficha-contenedor">
+                <div class="ficha-contenedor__cabecera">
+                    <img id="perfil_#{ficha.nombre}" class="ficha-contenedor__cabecera-perfil" src="/imagenes/profile_#{ficha.nombre}.#{ficha.nombre=='zalan'?'png':'jpg'}"/>
+                    <img id="marco_#{ficha.nombre}" class="ficha-contenedor__cabecera-perfil-marco" src="/imagenes/perfil_marco.png"/>
+                    <div class="ficha-contenedor__cabecera-tipos">
+                    	<ui:repeat value="#{ficha.roles}" var="tipo">
+                    		<img class="#{tipo}" src="/imagenes/ico_#{tipo}.png"/>
+                    	</ui:repeat>
+                    </div>
+                </div>
+                <div class="ficha-contenedor__cuerpo">
+                    <div class="ficha-contenedor__cuerpo-stats">
+                        <div class="ficha-contenedor__cuerpo-stat vida">
+                            <img class="icono-vida" src="/imagenes/ico_health.png"/><span class="stat-vida">#{ficha.vidaActual}/#{ficha.vida}</span>
+                        </div>
+                        <div class="ficha-contenedor__cuerpo-stat sangre">
+                            <img class="icono-sangre" src="/imagenes/ico_blood.png"/><span class="stat-sangre">#{ficha.sangreActual}/#{ficha.sangre}</span>
+                        </div>
+                        <div class="ficha-contenedor__cuerpo-stat energia">
+                            <img class="icono-energia" src="/imagenes/ico_energy.png"/><span class="stat-energia">#{ficha.energiaActual}/#{ficha.energia}</span>
+                        </div>
+                        <div class="ficha-contenedor__cuerpo-stat mana">
+                            <img class="icono-mana" src="/imagenes/ico_mana.png"/><span class="stat-mana">#{ficha.manaActual}/#{ficha.mana}</span>
+                        </div>
+                    </div>
+                    <p class="ficha-contenedor__cuerpo-clase">#{ficha.clase.toUpperCase()}</p>
+                    <span class="ficha-contenedor__cuerpo-textonivel">LV.:</span>
+                    <span class="ficha-contenedor__cuerpo-nivel">#{ficha.nivel}</span>
+                </div>
+                <div class="ficha-contenedor__pie">
+                    <span class="ficha-contenedor__pie-nombre">
+                        #{ficha.nombre.toUpperCase()}
+                    </span>
+                </div>
+            </div>
+        </div>
+           
+        <ui:remove> ETIQUETAS Y SUS WINDOWS </ui:remove>
+		<div class="caja">
+            <div class="etiquetas">
+                <div id="atributos_#{info.index}_etq" class="atributos etiqueta"></div>
+                <div id="habilidades_#{info.index}_etq" class="habilidades etiqueta"></div>
+                <div id="inventario_#{info.index}_etq" class="inventario etiqueta"></div>
+            </div>
+        </div>
+        <div id="ventanas">
+            <div id="win_atributos_#{info.index}" class="ventana win_atributos" ></div>
+            <div id="win_habilidades_#{info.index}" class="ventana win_habilidades" ></div>
+            <div id="win_inventario_#{info.index}" class="ventana win_inventario" ></div>
+        </div>
+    </div>
+       
+</ui:repeat>
+
+</body>
+
+</html>

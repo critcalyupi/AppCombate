@@ -1,5 +1,7 @@
 package app.equinox.bbdd;
 
-public class Arma {
+import app.equinox.core.Item;
+
+public class Arma extends Item {
 	
 }

@@ -7,7 +7,7 @@
 	  xmlns:p="http://primefaces.org/ui"
 	  xmlns:c="http://java.sun.com/jsp/jstl/core">
 <head>
-    <!-- importaciones y cosas chungas -->
+    <ui:remove> importaciones y cosas chungas </ui:remove>
     <link rel="stylesheet" type="text/css" href="estilos/main.css" />
 
     <link href='https://fonts.googleapis.com/css?family=Aclonica' rel='stylesheet' />
@@ -15,7 +15,7 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     
     <script type="text/javascript" src="javascript/js.js"></script>
-    <!-- cosillas basicas -->
+    <ui:remove> cosillas basicas </ui:remove>
     <title>Equinox: Gestor</title>
 
 </head>
@@ -23,7 +23,7 @@
 
 
 <body>
-<!-- ventana de entrada a la app -->
+	<ui:remove> ventana de entrada a la app </ui:remove>
     <div id="entry_window">
         <div class="titulo">
             <h1>EQUINOX</h1>
@@ -33,97 +33,25 @@
     </div>
 
 
-<!-- Ventana principal de la app -->
+	<ui:remove> Ventana principal de la app </ui:remove>
     <div id="main_window">
         <div id="menu_lateral" class="menu_shadow">
-
             <button class="clicable" id="salir" onClick="salirJuego();">(salir)</button>
         </div>
-
-
+		
+        <ui:remove> BUCLE CREANDO FICHAS - por hacer: ui:include </ui:remove>
         <div id="fichas">
-            <div id="ficha_1" class="carta_ficha carta_shadow aliado per">
-                <div class="capa farin">
-                    <p class="nombre">FARIN</p>
-                    <span id="titulos">BARBABRONCE DE LA CIUDAD DEL ACERO</span>
-                    <img class="clicable icono tank" src="imagenes/ico_tank.png" />
-                </div>
-            </div>
-            <div id="ficha_2" class="carta_ficha carta_shadow aliado per">
-                <div class="capa asher">
-                    <p class="nombre">ASHER</p>
-                    <img class="clicable icono damage" src="imagenes/ico_dps.png" />
-                </div>
-            </div>
-            <div id="ficha_3" class="carta_ficha carta_shadow aliado per">
-                <div class="capa xaldir">
-                    <p class="nombre">XALDIR</p>
-                    <img class="clicable icono damageM" src="imagenes/ico_dps.png" />
-                    <img class="clicable icono support" src="imagenes/ico_heal.png" />
-                </div>
-            </div>
-            <div id="ficha_4" class="carta_ficha carta_shadow aliado per">
-                <div class="capa zalan">
-                    <p class="nombre">ZALAN</p>
-                    <img class="clicable icono support" src="imagenes/ico_heal.png" />
-                </div>
-            </div>
-            <div id="ficha_5" class="carta_ficha carta_shadow aliado per">
-                <div class="capa sona">
-                    <p class="nombre">SONA</p>
-                    <img class="clicable icono healing" src="imagenes/ico_heal.png" />
-                </div>
-            </div>
-            <div id="ficha_6" class="carta_ficha carta_shadow aliado npc">
-                <div class="capa tobias">
-                    <p class="nombre">TOBIAS</p>
-                    <img class="clicable icono support" src="imagenes/ico_dps.png" />
-                </div>
-            </div>
-            <div id="ficha_7" class="carta_ficha carta_shadow enemigo">
-                <div class="capa">
-                    <p class="nombre">JIAGGRAS</p>
-                    <img class="clicable icono damage" src="imagenes/ico_dps.png" />
-                </div>
-            </div>
-            <div id="ficha_8" class="carta_ficha carta_shadow enemigo">
-                <div class="capa">
-                    <p class="nombre">DZILLIO</p>
-                    <img class="clicable icono damage" src="imagenes/ico_dps.png" />
-                </div>
-            </div>
-            <div id="ficha_9" class="carta_ficha carta_shadow enemigo">
-                <div class="capa">
-                    <p class="nombre">KULUYAN</p>
-                    <img class="clicable icono damage" src="imagenes/ico_dps.png" />
-                </div>
-            </div>
-            <div id="ficha_10" class="carta_ficha carta_shadow enemigo">
-                <div class="capa">
-                    <p class="nombre">DRAGÓN</p>
-                    <img class="clicable icono damage" src="imagenes/ico_dps.png" />
-                </div>
-            </div>
-            <div id="ficha_11" class="carta_ficha carta_shadow enemigo">
-                <div class="capa">
-                    <p class="nombre">MUSGOCHINO</p>
-                    <img class="clicable icono damage" src="imagenes/ico_heal.png" />
-                </div>
-            </div>
-            <div id="ficha_12" class="carta_ficha carta_shadow enemigo">
-                <div class="capa">
-                    <p class="nombre">REPTADOR</p>
-                    <img class="clicable icono damage" src="imagenes/ico_dps.png" />
-                </div>
-            </div>
+	        <ui:include src="modulo_fichas.xhtml">
+	        	<ui:param name="fichas" value="#{Global.personajes}" />
+	        </ui:include>
         </div>
     </div>
 
 
 
 
-    <!-- version actual -->
-    <span id="version">v. 0.0.1.0</span>
+    <ui:remove> version actual </ui:remove>
+    <span id="version">v. 0.0.2</span>
     
 </body>
 </html>

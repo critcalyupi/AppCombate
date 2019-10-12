@@ -1,10 +1,13 @@
 package app.beans;
 
-import javax.annotation.ManagedBean;
 
-@ManagedBean("Fichas")
+import javax.faces.bean.ManagedBean;
+import javax.faces.bean.RequestScoped;
+
+@ManagedBean(name = "Fichas", eager = true)
+@RequestScoped
 public class FichasBean {
-	Integer cantidadFichas = 5;
+	Integer cantidadFichas = 11;
 
 	public Integer getCantidadFichas() {
 		return cantidadFichas;
